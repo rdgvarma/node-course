@@ -50,7 +50,7 @@ app.get('/help',(req,res)=>{
 app.get('/about',(req,res)=>{
     //res.send('about  opening folder');
     res.render('about.hbs',{
-        pageTitle : 'about.HBSpage',
+        pageTitle : 'about.HBS page',
         htag: 'trail to be running',
        
     });
@@ -62,6 +62,17 @@ app.get('/home',(req,res)=>{
         htag: 'trail to be running in home'
        
     });
+});
+app.get('/projects',(req , res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'project.hbs',
+        htag:'project creation and git commit and heroku staging'
+    }); 
+});
+app.get('/procs',(req,res)=>{
+    res.render('procs.hbs',{
+        pageTitle: 'Procs'
+    })
 });
 
 app.get('/Bad',(req,res)=>{
